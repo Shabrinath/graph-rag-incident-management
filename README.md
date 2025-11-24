@@ -15,6 +15,11 @@ This repository demonstrates how to build an **LLM-powered Graph RAG pipeline** 
 
 It shows how raw incident reports (from Jira/Slack) can be turned into a **knowledge graph**, enabling powerful graph-based retrieval and reasoning.
 
+<img width="1429" height="674" alt="image" src="https://github.com/user-attachments/assets/0ba55ff7-9207-4d14-91ae-e7a51d9213e6" />
+
+<img width="1180" height="614" alt="image" src="https://github.com/user-attachments/assets/c60a9e41-15ed-4ad5-acb2-e3c39b546a44" />
+
+
 * * * * *
 
 🧠 What is a Graph Database?
@@ -36,6 +41,7 @@ Unlike relational databases (tables) or document stores (JSON), graph databases 
 (Incident)-[:HANDLED_BY]->(Engineer)
 (Service)-[:HAS_INCIDENT]->(Incident)
 ```
+<img width="1021" height="486" alt="image" src="https://github.com/user-attachments/assets/ab7c6f63-3441-4e32-96d7-21c12c7069ba" />
 
 A graph database like **Neo4j** is optimized to answer questions like:
 
@@ -199,7 +205,7 @@ These require **relational reasoning**, which plain text RAG cannot do.
 🏗 Project Structure
 ====================
 ```
-├── graph_rag_neo4j_incident_demo.ipynb   # Main notebook
+├── graph_rag_neo4j.ipynb   # Main notebook
 ├── README.md                             # This file
 └── requirements.txt (optional)
 ```
