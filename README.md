@@ -31,10 +31,11 @@ A **graph database** is a database designed to store and query information in th
 Unlike relational databases (tables) or document stores (JSON), graph databases treat **relationships as first-class citizens**.
 
 ### Example graph structure
-
-`(Incident)-[:HAS_SEVERITY]->(Severity)
+```
+(Incident)-[:HAS_SEVERITY]->(Severity)
 (Incident)-[:HANDLED_BY]->(Engineer)
-(Service)-[:HAS_INCIDENT]->(Incident)`
+(Service)-[:HAS_INCIDENT]->(Incident)
+```
 
 A graph database like **Neo4j** is optimized to answer questions like:
 
@@ -74,11 +75,12 @@ Typical SQL query:
 
 SQL → Expensive, JOIN-heavy\
 Graph → Simple:
-
-`MATCH (s:Service {name: 'payment-service'})<-[:DEPENDS_ON]-
+```
+MATCH (s:Service {name: 'payment-service'})<-[:DEPENDS_ON]-
       (other:Service)-[:HAS_INCIDENT]->(i:Incident)-[:HANDLED_BY]->(e:Engineer)
 RETURN e, count(*) as incidents
-ORDER BY incidents DESC LIMIT 3`
+ORDER BY incidents DESC LIMIT 3
+```
 
 * * * * *
 
@@ -196,10 +198,11 @@ These require **relational reasoning**, which plain text RAG cannot do.
 
 🏗 Project Structure
 ====================
-
-`├── graph_rag_neo4j_incident_demo.ipynb   # Main notebook
+```
+├── graph_rag_neo4j_incident_demo.ipynb   # Main notebook
 ├── README.md                             # This file
-└── requirements.txt (optional)`
+└── requirements.txt (optional)
+```
 
 * * * * *
 
